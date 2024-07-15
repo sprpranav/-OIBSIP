@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Authentication System</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+  <div class="container mt-5" >
+    <div class="card mx-auto" style="max-width: 400px;">
+      <div class="card-header bg-primary text-white">
+        Login Authentication
+      </div>
+      <div class="card-body">
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <hr>
+        <p class="text-center">New User? <a href="#" id="registerLink">Register Here</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="newUsername">Username</label>
+              <input type="text" id="newUsername" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="newPassword">Password</label>
+              <input type="password" id="newPassword" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="securedPage" class="container mt-5 d-none">
+    <div class="card mx-auto" style="max-width: 400px;">
+      <div class="card-header bg-success text-white">
+        Secured Page
+      </div>
+      <div class="card-body">
+        <p>Welcome to the secured page!</p>
+        <button id="logoutBtn" class="btn btn-danger btn-block">Logout</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./login.js"></script>
+</body>
+</html>
